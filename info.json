@@ -1,0 +1,9 @@
+{
+  "name": "rampant-arsenal-bio-patch",
+  "version": "0.1.0",
+  "title": "Rampant Arsenal - bio weapon patch",
+  "author": "mozzarel_la",
+  "factorio_version": "1.1",
+  "dependencies": [ "base >= 1.1", "RampantArsenal >= 1.1.6" ],
+  "description": "Nerfs the damage from Rampant Arsenal's toxic clouds and bio ammo"
+}
