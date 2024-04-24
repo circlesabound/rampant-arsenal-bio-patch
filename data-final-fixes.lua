@@ -2,7 +2,6 @@
 --  - direct damage from the SmokeWithTrigger prototype, which applies once every 30 ticks
 --  - apply a sticker onto the target which continues ticking even if the target leaves the area
 for _, prototype in pairs(data.raw["smoke-with-trigger"]) do
-    log("checking smoke-with-trigger prototype "..prototype.name)
     if string.find(prototype.name, "%-cloud%-rampant%-arsenal") and string.find(prototype.name, "toxic") then
         -- big-toxic-cloud-rampant-arsenal does not have an attached action for whatever reason
         if prototype.action ~= nil then
@@ -18,7 +17,6 @@ end
 
 -- stickers are also directly applied by bio ammo, not just toxic clouds
 for _, prototype in pairs(data.raw["sticker"]) do
-    log("checking sticker prototype "..prototype.name)
     if string.find(prototype.name, "%-sticker%-rampant%-arsenal") and string.find(prototype.name, "toxic") then
         -- reduce damage done by the sticker to 5%
         prototype.damage_per_tick.amount = prototype.damage_per_tick.amount / 20
